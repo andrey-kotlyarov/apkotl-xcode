@@ -11,6 +11,9 @@ import UIKit
 class ViewControllerD: UIViewController
 {
     public var showBackButton: Bool = false
+    static var counter: Int = 0
+    
+    @IBOutlet var lblTitle: UILabel!
     
 
     @IBOutlet var btnBack: UIButton!
@@ -32,6 +35,10 @@ class ViewControllerD: UIViewController
         {
             btnBack.setTitle("---", for: UIControlState.normal)
         }
+        
+        
+        ViewControllerD.counter += 1
+        lblTitle.text = "Controller D - counter: \(ViewControllerD.counter)"
         
         // Do any additional setup after loading the view.
     }

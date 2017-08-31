@@ -16,6 +16,7 @@
 		5525465C1F584265001438AD /* ViewControllerB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525465B1F584265001438AD /* ViewControllerB.swift */; };
 		5525465E1F585036001438AD /* ViewControllerC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525465D1F585036001438AD /* ViewControllerC.swift */; };
 		552546601F585061001438AD /* ViewControllerD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525465F1F585061001438AD /* ViewControllerD.swift */; };
+		552546631F588205001438AD /* MData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552546621F588205001438AD /* MData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5525465B1F584265001438AD /* ViewControllerB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerB.swift; sourceTree = "<group>"; };
 		5525465D1F585036001438AD /* ViewControllerC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerC.swift; sourceTree = "<group>"; };
 		5525465F1F585061001438AD /* ViewControllerD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerD.swift; sourceTree = "<group>"; };
+		552546621F588205001438AD /* MData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		552545EC1F58312C001438AD /* task01 */ = {
 			isa = PBXGroup;
 			children = (
+				552546611F5881E1001438AD /* Model */,
 				552545ED1F58312C001438AD /* AppDelegate.swift */,
 				552545EF1F58312C001438AD /* ViewController.swift */,
 				552546591F584246001438AD /* ViewControllerA.swift */,
@@ -74,6 +77,14 @@
 				552545F91F58312C001438AD /* Info.plist */,
 			);
 			path = task01;
+			sourceTree = "<group>";
+		};
+		552546611F5881E1001438AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				552546621F588205001438AD /* MData.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552546631F588205001438AD /* MData.swift in Sources */,
 				552545F01F58312C001438AD /* ViewController.swift in Sources */,
 				5525465C1F584265001438AD /* ViewControllerB.swift in Sources */,
 				5525465E1F585036001438AD /* ViewControllerC.swift in Sources */,

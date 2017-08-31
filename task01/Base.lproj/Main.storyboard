@@ -237,6 +237,39 @@
                                     <action selector="btnD_OnTouchUp:" destination="grd-4F-5o2" eventType="touchUpInside" id="HP0-tt-4SJ"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="43" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wpj-od-bZL">
+                                <rect key="frame" x="36" y="149" width="303" height="360"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="AcX-09-HGx"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellC" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellC" textLabel="h3z-kB-LlS" detailTextLabel="uQN-SD-Mt5" rowHeight="43" style="IBUITableViewCellStyleValue1" id="YV9-cd-fid">
+                                        <rect key="frame" x="0.0" y="28" width="303" height="43"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YV9-cd-fid" id="fTq-we-lve">
+                                            <rect key="frame" x="0.0" y="0.0" width="303" height="42.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h3z-kB-LlS">
+                                                    <rect key="frame" x="15" y="11" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uQN-SD-Mt5">
+                                                    <rect key="frame" x="250.5" y="14" width="37.5" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -244,20 +277,31 @@
                             <constraint firstItem="tUd-YD-0Bd" firstAttribute="top" secondItem="S0v-HM-NX7" secondAttribute="bottom" constant="16" id="H5i-Mg-2yx"/>
                             <constraint firstItem="S0v-HM-NX7" firstAttribute="leading" secondItem="NUh-X6-lhE" secondAttribute="leadingMargin" id="KHL-VA-f1F"/>
                             <constraint firstItem="miG-Vy-2hf" firstAttribute="centerX" secondItem="NUh-X6-lhE" secondAttribute="centerX" id="OM0-oa-IQ4"/>
+                            <constraint firstItem="Wpj-od-bZL" firstAttribute="top" secondItem="tUd-YD-0Bd" secondAttribute="bottom" constant="8" id="RFG-Jo-lF4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wpj-od-bZL" secondAttribute="trailing" constant="20" id="Rei-ph-RwM"/>
                             <constraint firstItem="S0v-HM-NX7" firstAttribute="top" secondItem="A65-hL-Syf" secondAttribute="bottom" id="gMQ-Mk-CiF"/>
                             <constraint firstItem="ZeF-NY-TyV" firstAttribute="top" secondItem="miG-Vy-2hf" secondAttribute="bottom" constant="20" id="hIq-F2-vJ8"/>
+                            <constraint firstItem="Wpj-od-bZL" firstAttribute="leading" secondItem="NUh-X6-lhE" secondAttribute="leadingMargin" constant="20" id="oD7-T8-MhW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="jIB-mY-wNq"/>
+                    <navigationItem key="navigationItem" id="jIB-mY-wNq">
+                        <barButtonItem key="rightBarButtonItem" title="Edit table" id="KdP-Tv-RDx">
+                            <connections>
+                                <action selector="btnItemEditTable_OnTouchUp:" destination="grd-4F-5o2" id="HDU-di-PaC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnBack" destination="miG-Vy-2hf" id="99f-CZ-ltj"/>
                         <outlet property="btnD" destination="tUd-YD-0Bd" id="phx-Rn-W2J"/>
+                        <outlet property="btnItemEditTable" destination="KdP-Tv-RDx" id="Xxp-Gg-sjc"/>
+                        <outlet property="tableViewC" destination="Wpj-od-bZL" id="3dN-16-0gG"/>
                         <segue destination="yZe-sQ-P2w" kind="show" identifier="segueCtoD" id="Sq1-3E-Z17"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rzo-oq-8hI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="798"/>
+            <point key="canvasLocation" x="901.60000000000002" y="797.45127436281871"/>
         </scene>
         <!--View ControllerD-->
         <scene sceneID="LU4-jX-cTz">
@@ -308,6 +352,7 @@
                     </view>
                     <connections>
                         <outlet property="btnBack" destination="Mht-iz-SDa" id="GaR-70-QT1"/>
+                        <outlet property="lblTitle" destination="dkJ-1C-GMc" id="Aj6-v0-Reu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxx-Vh-yZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
