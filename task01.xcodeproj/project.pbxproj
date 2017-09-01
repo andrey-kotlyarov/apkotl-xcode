@@ -18,6 +18,8 @@
 		552546601F585061001438AD /* ViewControllerD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525465F1F585061001438AD /* ViewControllerD.swift */; };
 		552546631F588205001438AD /* MData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552546621F588205001438AD /* MData.swift */; };
 		5555B1671F59DC8700E8622A /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5555B1661F59DC8700E8622A /* PlayerViewController.swift */; };
+		5555B16A1F59FEA300E8622A /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5555B1691F59FEA300E8622A /* AVKit.framework */; };
+		5555B16C1F59FEAA00E8622A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5555B16B1F59FEAA00E8622A /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		5525465F1F585061001438AD /* ViewControllerD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerD.swift; sourceTree = "<group>"; };
 		552546621F588205001438AD /* MData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MData.swift; sourceTree = "<group>"; };
 		5555B1661F59DC8700E8622A /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		5555B1691F59FEA300E8622A /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		5555B16B1F59FEAA00E8622A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5555B16C1F59FEAA00E8622A /* AVFoundation.framework in Frameworks */,
+				5555B16A1F59FEA300E8622A /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +58,7 @@
 			children = (
 				552545EC1F58312C001438AD /* task01 */,
 				552545EB1F58312C001438AD /* Products */,
+				5555B1681F59FEA300E8622A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +95,15 @@
 				552546621F588205001438AD /* MData.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		5555B1681F59FEA300E8622A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5555B16B1F59FEAA00E8622A /* AVFoundation.framework */,
+				5555B1691F59FEA300E8622A /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +312,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TQZN9PYRPG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/task01",
+				);
 				INFOPLIST_FILE = task01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apkotl.task01;
@@ -309,6 +329,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TQZN9PYRPG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/task01",
+				);
 				INFOPLIST_FILE = task01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apkotl.task01;
