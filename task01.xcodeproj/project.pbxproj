@@ -17,6 +17,7 @@
 		5525465E1F585036001438AD /* ViewControllerC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525465D1F585036001438AD /* ViewControllerC.swift */; };
 		552546601F585061001438AD /* ViewControllerD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525465F1F585061001438AD /* ViewControllerD.swift */; };
 		552546631F588205001438AD /* MData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552546621F588205001438AD /* MData.swift */; };
+		5555B1671F59DC8700E8622A /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5555B1661F59DC8700E8622A /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5525465D1F585036001438AD /* ViewControllerC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerC.swift; sourceTree = "<group>"; };
 		5525465F1F585061001438AD /* ViewControllerD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerD.swift; sourceTree = "<group>"; };
 		552546621F588205001438AD /* MData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MData.swift; sourceTree = "<group>"; };
+		5555B1661F59DC8700E8622A /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				5525465B1F584265001438AD /* ViewControllerB.swift */,
 				5525465D1F585036001438AD /* ViewControllerC.swift */,
 				5525465F1F585061001438AD /* ViewControllerD.swift */,
+				5555B1661F59DC8700E8622A /* PlayerViewController.swift */,
 				552545F11F58312C001438AD /* Main.storyboard */,
 				552545F41F58312C001438AD /* Assets.xcassets */,
 				552545F61F58312C001438AD /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				552546631F588205001438AD /* MData.swift in Sources */,
+				5555B1671F59DC8700E8622A /* PlayerViewController.swift in Sources */,
 				552545F01F58312C001438AD /* ViewController.swift in Sources */,
 				5525465C1F584265001438AD /* ViewControllerB.swift in Sources */,
 				5525465E1F585036001438AD /* ViewControllerC.swift in Sources */,

@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
+
 
 class ViewController: UIViewController
 {
@@ -17,6 +20,21 @@ class ViewController: UIViewController
     @IBOutlet var btnD: UIButton!
     
     static var counter: Int = 0
+    
+    @IBOutlet var txtStreamUrl: UITextField!
+    @IBOutlet var btnPlayStream: UIButton!
+    
+    
+    @IBAction func btnPlayStream_OnTouchUp(_ sender: Any)
+    {
+        let pvc = storyboard?.instantiateViewController(withIdentifier: "sbPlayerViewController") as! AVPlayerViewController
+        
+        let streamUrl = URL(string: txtStreamUrl.text!)
+        pvc.player = AVPlayer(url: streamUrl!);
+        
+        present(pvc, animated: true, completion: nil)
+        
+    }
     
     
     @IBAction func btnA_OnTouchUp(_ sender: UIButton)
@@ -31,7 +49,6 @@ class ViewController: UIViewController
         
         vcB.dataString = "Counter (btn touch) = \(ViewController.counter)"
         present(vcB, animated: true, completion: nil)
-        
     }
     
     @IBAction func btnC_OnTouchUp(_ sender: UIButton)
@@ -72,7 +89,9 @@ class ViewController: UIViewController
         
         ViewController.counter += 1
         
+        txtStreamUrl.text = "http://72.3.166.231:1935/live/apkotlStream/playlist.m3u8";
         lblMessage.text = "Counter = \(ViewController.counter)"
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
