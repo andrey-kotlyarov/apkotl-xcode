@@ -99,6 +99,17 @@
                                     <action selector="btnPlayStream_OnTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JGU-QX-AJg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bek-3H-87V">
+                                <rect key="frame" x="97" y="362" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="E5w-Ii-jz0"/>
+                                    <constraint firstAttribute="height" constant="40" id="Z6G-hS-hXm"/>
+                                </constraints>
+                                <state key="normal" title="Record Stream"/>
+                                <connections>
+                                    <action selector="btnRecordStream_OnTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zuB-cW-TdU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97845891272580177" blue="0.88051331087395002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -112,8 +123,10 @@
                             <constraint firstItem="qIS-WZ-SBl" firstAttribute="top" secondItem="CuJ-BK-2c4" secondAttribute="bottom" constant="8" id="GvP-ku-Pup"/>
                             <constraint firstItem="zc5-rU-Xlw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Gz4-Dz-Ngp"/>
                             <constraint firstItem="2wt-VR-YNF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ISw-s9-67r"/>
+                            <constraint firstItem="Bek-3H-87V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KDD-Go-CxF"/>
                             <constraint firstItem="CuJ-BK-2c4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Lnl-cs-xSX"/>
                             <constraint firstItem="zc5-rU-Xlw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Opt-9g-hJh"/>
+                            <constraint firstItem="Bek-3H-87V" firstAttribute="top" secondItem="zc5-rU-Xlw" secondAttribute="bottom" constant="8" id="eXZ-Zq-v7x"/>
                             <constraint firstItem="qIS-WZ-SBl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fWm-y0-XI0"/>
                             <constraint firstItem="zi0-c3-uW3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="n64-lU-1q6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BLh-2t-fe8" secondAttribute="bottom" id="pdW-Ht-nLw"/>
@@ -126,6 +139,7 @@
                         <outlet property="btnC" destination="BLh-2t-fe8" id="H9x-jE-Aad"/>
                         <outlet property="btnD" destination="8T4-LE-9S4" id="3qY-gW-HYt"/>
                         <outlet property="btnPlayStream" destination="2wt-VR-YNF" id="ZSP-in-1WY"/>
+                        <outlet property="btnRecordStream" destination="Bek-3H-87V" id="0aS-Fu-h5k"/>
                         <outlet property="lblMessage" destination="zc5-rU-Xlw" id="hBT-gn-EIL"/>
                         <outlet property="txtStreamUrl" destination="qIS-WZ-SBl" id="ZLw-ha-3SY"/>
                         <segue destination="Dhg-Fh-z1e" kind="presentation" identifier="segueToA" id="GmL-RO-5Ea"/>
@@ -458,5 +472,84 @@
             </objects>
             <point key="canvasLocation" x="2300" y="107"/>
         </scene>
+        <!--View Controller Record-->
+        <scene sceneID="xg4-bX-7yf">
+            <objects>
+                <viewController storyboardIdentifier="sbViewControllerRecord" id="Et1-Fj-5tj" customClass="ViewControllerRecord" customModule="task01" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VIs-vc-51w"/>
+                        <viewControllerLayoutGuide type="bottom" id="6iu-Pp-FN1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xAv-6E-m8C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piU-Xl-CGd">
+                                <rect key="frame" x="26" y="612" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="0R2-i6-Fdp"/>
+                                    <constraint firstAttribute="height" constant="45" id="3I6-Zt-KFW"/>
+                                </constraints>
+                                <state key="normal" image="loop_off"/>
+                                <connections>
+                                    <action selector="didTapLoopButton:" destination="Et1-Fj-5tj" eventType="touchUpInside" id="cvv-W2-Ipa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzR-Ty-Ixe">
+                                <rect key="frame" x="150" y="582" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="ADJ-mM-NI4"/>
+                                    <constraint firstAttribute="height" constant="75" id="xEI-Rh-PJ6"/>
+                                </constraints>
+                                <state key="normal" image="start_button"/>
+                                <connections>
+                                    <action selector="didTapBroadcast:" destination="Et1-Fj-5tj" eventType="touchUpInside" id="uFG-hA-0S7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkD-Yn-W8w">
+                                <rect key="frame" x="320" y="612" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="jIa-Le-Vo2"/>
+                                    <constraint firstAttribute="width" constant="45" id="oC2-KP-QCy"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="settings_button"/>
+                                <connections>
+                                    <action selector="didTapSettings:" destination="Et1-Fj-5tj" eventType="touchUpInside" id="VDa-z9-ACu"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bWc-Es-Kem">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6iu-Pp-FN1" firstAttribute="top" secondItem="piU-Xl-CGd" secondAttribute="bottom" constant="10" id="83A-sg-zhn"/>
+                            <constraint firstItem="bWc-Es-Kem" firstAttribute="trailing" secondItem="xAv-6E-m8C" secondAttribute="trailingMargin" id="8Tq-kP-u1D"/>
+                            <constraint firstItem="6iu-Pp-FN1" firstAttribute="top" secondItem="bWc-Es-Kem" secondAttribute="bottom" id="9ft-U3-m7h"/>
+                            <constraint firstItem="6iu-Pp-FN1" firstAttribute="top" secondItem="vkD-Yn-W8w" secondAttribute="bottom" constant="10" id="DwX-VR-VTF"/>
+                            <constraint firstItem="IzR-Ty-Ixe" firstAttribute="centerX" secondItem="xAv-6E-m8C" secondAttribute="centerX" id="Jn2-lz-Zpr"/>
+                            <constraint firstAttribute="trailing" secondItem="vkD-Yn-W8w" secondAttribute="trailing" constant="10" id="Jya-al-PbZ"/>
+                            <constraint firstItem="piU-Xl-CGd" firstAttribute="leading" secondItem="xAv-6E-m8C" secondAttribute="leadingMargin" constant="10" id="LmT-m1-cfg"/>
+                            <constraint firstItem="6iu-Pp-FN1" firstAttribute="top" secondItem="IzR-Ty-Ixe" secondAttribute="bottom" constant="10" id="Nu6-Z6-ugH"/>
+                            <constraint firstItem="bWc-Es-Kem" firstAttribute="top" secondItem="VIs-vc-51w" secondAttribute="bottom" id="aNJ-eR-bNu"/>
+                            <constraint firstItem="bWc-Es-Kem" firstAttribute="leading" secondItem="xAv-6E-m8C" secondAttribute="leadingMargin" id="joI-QQ-ImS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="broadcastButton" destination="IzR-Ty-Ixe" id="GEg-HL-TSH"/>
+                        <outlet property="imageView" destination="bWc-Es-Kem" id="vbK-FW-pA4"/>
+                        <outlet property="loopButton" destination="piU-Xl-CGd" id="gnO-C3-NKs"/>
+                        <outlet property="settingsButton" destination="vkD-Yn-W8w" id="y7o-sw-GBt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4R0-Te-IsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2944.8000000000002" y="106.59670164917542"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="loop_off" width="45" height="45"/>
+        <image name="settings_button" width="45" height="45"/>
+        <image name="start_button" width="75" height="75"/>
+    </resources>
 </document>

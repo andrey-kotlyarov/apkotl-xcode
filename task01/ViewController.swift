@@ -23,6 +23,7 @@ class ViewController: UIViewController
     
     @IBOutlet var txtStreamUrl: UITextField!
     @IBOutlet var btnPlayStream: UIButton!
+    @IBOutlet var btnRecordStream: UIButton!
     
     
     @IBAction func btnPlayStream_OnTouchUp(_ sender: Any)
@@ -33,8 +34,16 @@ class ViewController: UIViewController
         pvc.player = AVPlayer(url: streamUrl!);
         
         present(pvc, animated: true, completion: nil)
-        
     }
+    
+    @IBAction func btnRecordStream_OnTouchUp(_ sender: Any)
+    {
+        let vcRecord = storyboard?.instantiateViewController(withIdentifier: "sbViewControllerRecord") as! ViewControllerRecord
+        
+        //vcRecord.dataString = "Counter (btn touch) = \(ViewController.counter)"
+        present(vcRecord, animated: true, completion: nil)
+    }
+    
     
     
     @IBAction func btnA_OnTouchUp(_ sender: UIButton)

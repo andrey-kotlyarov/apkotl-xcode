@@ -17,10 +17,28 @@
 		5525465E1F585036001438AD /* ViewControllerC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525465D1F585036001438AD /* ViewControllerC.swift */; };
 		552546601F585061001438AD /* ViewControllerD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525465F1F585061001438AD /* ViewControllerD.swift */; };
 		552546631F588205001438AD /* MData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552546621F588205001438AD /* MData.swift */; };
+		553096F61F5C67E100BC2B3B /* WowzaGoCoderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553096F11F5C67A100BC2B3B /* WowzaGoCoderSDK.framework */; };
+		553096F71F5C67E100BC2B3B /* WowzaGoCoderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 553096F11F5C67A100BC2B3B /* WowzaGoCoderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		553096FA1F5C6FCF00BC2B3B /* ViewControllerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553096F91F5C6FCF00BC2B3B /* ViewControllerRecord.swift */; };
+		553096FE1F5CA14400BC2B3B /* shared in Resources */ = {isa = PBXBuildFile; fileRef = 553096FD1F5CA14400BC2B3B /* shared */; };
 		5555B1671F59DC8700E8622A /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5555B1661F59DC8700E8622A /* PlayerViewController.swift */; };
 		5555B16A1F59FEA300E8622A /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5555B1691F59FEA300E8622A /* AVKit.framework */; };
 		5555B16C1F59FEAA00E8622A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5555B16B1F59FEAA00E8622A /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		553096F81F5C67E100BC2B3B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				553096F71F5C67E100BC2B3B /* WowzaGoCoderSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		552545EA1F58312C001438AD /* task01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task01.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +53,10 @@
 		5525465D1F585036001438AD /* ViewControllerC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerC.swift; sourceTree = "<group>"; };
 		5525465F1F585061001438AD /* ViewControllerD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerD.swift; sourceTree = "<group>"; };
 		552546621F588205001438AD /* MData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MData.swift; sourceTree = "<group>"; };
+		553096F11F5C67A100BC2B3B /* WowzaGoCoderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WowzaGoCoderSDK.framework; sourceTree = "<group>"; };
+		553096F91F5C6FCF00BC2B3B /* ViewControllerRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerRecord.swift; sourceTree = "<group>"; };
+		553096FD1F5CA14400BC2B3B /* shared */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shared; sourceTree = "<group>"; };
+		553096FF1F5CA64600BC2B3B /* MP4Player-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MP4Player-Bridging-Header.h"; sourceTree = "<group>"; };
 		5555B1661F59DC8700E8622A /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		5555B1691F59FEA300E8622A /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		5555B16B1F59FEAA00E8622A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -45,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553096F61F5C67E100BC2B3B /* WowzaGoCoderSDK.framework in Frameworks */,
 				5555B16C1F59FEAA00E8622A /* AVFoundation.framework in Frameworks */,
 				5555B16A1F59FEA300E8622A /* AVKit.framework in Frameworks */,
 			);
@@ -73,6 +96,7 @@
 		552545EC1F58312C001438AD /* task01 */ = {
 			isa = PBXGroup;
 			children = (
+				553096F11F5C67A100BC2B3B /* WowzaGoCoderSDK.framework */,
 				552546611F5881E1001438AD /* Model */,
 				552545ED1F58312C001438AD /* AppDelegate.swift */,
 				552545EF1F58312C001438AD /* ViewController.swift */,
@@ -80,11 +104,14 @@
 				5525465B1F584265001438AD /* ViewControllerB.swift */,
 				5525465D1F585036001438AD /* ViewControllerC.swift */,
 				5525465F1F585061001438AD /* ViewControllerD.swift */,
+				553096F91F5C6FCF00BC2B3B /* ViewControllerRecord.swift */,
 				5555B1661F59DC8700E8622A /* PlayerViewController.swift */,
 				552545F11F58312C001438AD /* Main.storyboard */,
 				552545F41F58312C001438AD /* Assets.xcassets */,
 				552545F61F58312C001438AD /* LaunchScreen.storyboard */,
 				552545F91F58312C001438AD /* Info.plist */,
+				553096FF1F5CA64600BC2B3B /* MP4Player-Bridging-Header.h */,
+				553096FD1F5CA14400BC2B3B /* shared */,
 			);
 			path = task01;
 			sourceTree = "<group>";
@@ -116,6 +143,7 @@
 				552545E61F58312C001438AD /* Sources */,
 				552545E71F58312C001438AD /* Frameworks */,
 				552545E81F58312C001438AD /* Resources */,
+				553096F81F5C67E100BC2B3B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				552545F81F58312C001438AD /* LaunchScreen.storyboard in Resources */,
+				553096FE1F5CA14400BC2B3B /* shared in Resources */,
 				552545F51F58312C001438AD /* Assets.xcassets in Resources */,
 				552545F31F58312C001438AD /* Main.storyboard in Resources */,
 			);
@@ -182,6 +211,7 @@
 				552546631F588205001438AD /* MData.swift in Sources */,
 				5555B1671F59DC8700E8622A /* PlayerViewController.swift in Sources */,
 				552545F01F58312C001438AD /* ViewController.swift in Sources */,
+				553096FA1F5C6FCF00BC2B3B /* ViewControllerRecord.swift in Sources */,
 				5525465C1F584265001438AD /* ViewControllerB.swift in Sources */,
 				5525465E1F585036001438AD /* ViewControllerC.swift in Sources */,
 				5525465A1F584246001438AD /* ViewControllerA.swift in Sources */,
@@ -320,6 +350,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apkotl.task01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -337,6 +368,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apkotl.task01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
