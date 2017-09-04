@@ -49,7 +49,9 @@ class ViewControllerRecord: UIViewController, WZStatusCallback
     
     //MARK: - GoCoder variables
     let SDKSampleSavedConfigKey = "SDKSampleSavedConfigKey"
-    let SDKSampleAppLicenseKey = "GOSK-6443-0101-9517-C3A1-38F1"
+    //let SDKSampleAppLicenseKey = "EDEV4-xwKBJ-WUbhy-DWRAZ-ewFcJ-3aX3M-94Eum6AjpEYN"
+    //let SDKSampleAppLicenseKey = "GOSK-6443-0101-9517-C3A1-38F1"
+    let SDKSampleAppLicenseKey = "GOSK-2344-0103-26D0-B620-0B7D"
     var goCoderConfig:WowzaConfig!
     var goCoderStatus = WZStatus()
     var goCoderRegistrationChecked = false
@@ -83,8 +85,21 @@ class ViewControllerRecord: UIViewController, WZStatusCallback
             goCoderConfig = WowzaConfig()
         }
         
-        //goCoderConfig.streamName = "apkotlStream"
-        //goCoderConfig.hostAddress = "72.3.166.231"
+        //
+        //
+        //
+        
+        
+        goCoderConfig.hostAddress = "72.3.166.231"
+        goCoderConfig.portNumber = 1935
+        goCoderConfig.applicationName = "live"
+        goCoderConfig.streamName = "apkotlStream"
+        goCoderConfig.username = "booster"
+        goCoderConfig.password = "booster"
+        
+        //
+        //
+        //
         
         goCoderConfig.broadcastVideoOrientation = .alwaysLandscape
         goCoderConfig.audioEnabled = false
